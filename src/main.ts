@@ -45,16 +45,19 @@ const main = async () => {
   }
 
   do {
+    // eslint-disable-next-line no-await-in-loop
     const result = await runTest(TEST, {
       protocol: getProtocol(urlParts),
       target: urlParts,
       query: env.QUERY,
     });
-  
+
+    // eslint-disable-next-line no-await-in-loop
     await reportTestResult(result, {
       target: createUrl(urlParts),
       slackWebhook: env.SLACK_WEBHOOK,
     });
+    // eslint-disable-next-line no-constant-condition
   } while (1);
 };
 
