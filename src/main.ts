@@ -44,16 +44,18 @@ const main = async () => {
     throw new Error("Missing protocol.");
   }
 
-  const result = await runTest(TEST, {
-    protocol: getProtocol(urlParts),
-    target: urlParts,
-    query: env.QUERY,
-  });
-
-  await reportTestResult(result, {
-    target: createUrl(urlParts),
-    slackWebhook: env.SLACK_WEBHOOK,
-  });
+  do {
+      const result = await runTest(TEST, {
+        protocol: getProtocol(urlParts),
+        target: urlParts,
+        query: env.QUERY,
+      });
+    
+      await reportTestResult(result, {
+        target: createUrl(urlParts),
+        slackWebhook: env.SLACK_WEBHOOK,
+      });
+  } while (1);
 };
 
 void main();
