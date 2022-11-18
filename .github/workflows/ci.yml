@@ -39,11 +39,11 @@ jobs:
         with:
           push: true
           file: ./Dockerfile.worker
-          tags: ghcr.io/chainsaw2k/ntu-worker
+          tags: ghcr.io/${{ github.actor }}/ntu-worker
       -
         name: Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
           file: ./Dockerfile.cli
-          tags: ghcr.io/chainsaw2k/ntu-cli
+          tags: ghcr.io/${{ github.actor }}/ntu-cli
