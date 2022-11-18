@@ -6,11 +6,11 @@ export const reportLatencyTestResult = async (
   testTarget: string,
   reportTargets: { slack?: IncomingWebhook }
 ) => {
-  console.log("requests ", result.requests);
-  console.log("median ", result.median);
-  console.log("p90 ", result.p90);
-  console.log("p95 ", result.p95);
-  console.log("p99 ", result.p99);
+  console.log("requests", result.requests);
+  console.log("median", result.median);
+  console.log("p90", result.p90);
+  console.log("p95", result.p95);
+  console.log("p99", result.p99);
 
   await reportTargets.slack?.send({
     blocks: [
