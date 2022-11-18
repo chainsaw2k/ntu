@@ -30,7 +30,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: polyscale-bot
+          username: chainsaw2k
           password: ${{ secrets.PRIVATE_REPO_WRITE_PACKAGES_PERMS }}
 
       -
@@ -39,11 +39,11 @@ jobs:
         with:
           push: true
           file: ./Dockerfile.worker
-          tags: ghcr.io/polyscale/ntu-worker
+          tags: ghcr.io/chainsaw2k/ntu-worker
       -
         name: Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
           file: ./Dockerfile.cli
-          tags: ghcr.io/polyscale/ntu-cli
+          tags: ghcr.io/chainsaw2k/ntu-cli
