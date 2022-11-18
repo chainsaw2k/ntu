@@ -27,7 +27,7 @@ export const runTest = async (type: EnvType["TEST"], args: RunTestArgs) => {
   // A console.log(`Target: ${createUrl(args.target)}`);
 
   if (args.query) {
-    console.log(args.query);
+    // A console.log(args.query);
   }
 
   switch (type) {
