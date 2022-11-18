@@ -34,7 +34,6 @@ async function* gen(args: RunTestArgs) {
   if (connection) {
     await connection.close();
   }
-
 }
 
 export const latencyTest = async (args: RunTestArgs) => {
