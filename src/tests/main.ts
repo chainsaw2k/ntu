@@ -23,8 +23,8 @@ export type RunTestArgs = {
 };
 
 export const runTest = async (type: EnvType["TEST"], args: RunTestArgs) => {
-  console.log(`Test: ${type}`);
-  console.log(`Target: ${createUrl(args.target)}`);
+  // A console.log(`Test: ${type}`);
+  // A console.log(`Target: ${createUrl(args.target)}`);
 
   if (args.query) {
     console.log(args.query);

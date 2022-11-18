@@ -43,7 +43,7 @@ type RequestArgs =
     };
 
 export const createConnection = async (protocol: string, args: RunTestArgs) => {
-  console.log("Establishing database connection...");
+  // A console.log("Establishing database connection...");
 
   switch (protocol) {
     case "mysql":
@@ -70,7 +70,7 @@ export const createConnection = async (protocol: string, args: RunTestArgs) => {
       return {
         connection,
         async close() {
-          console.log("Closing database connection...");
+          // A console.log("Closing database connection...");
 
           await connection.end();
         },
