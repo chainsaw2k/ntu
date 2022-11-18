@@ -8,6 +8,12 @@ export const reportLatencyTestResult = async (
 ) => {
   console.table(result);
 
+  console.log(result.median);
+  console.log(result.p90);
+  console.log(result.p95);
+  console.log(result.99);
+  console.log(result.requests);
+
   await reportTargets.slack?.send({
     blocks: [
       {
