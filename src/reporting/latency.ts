@@ -6,8 +6,6 @@ export const reportLatencyTestResult = async (
   testTarget: string,
   reportTargets: { slack?: IncomingWebhook }
 ) => {
-  // A console.table(result);
-
   console.log(result.requests);
   console.log(result.median);
   console.log(result.p90);
