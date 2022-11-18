@@ -30,8 +30,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: chainsaw2k
-          password: ${{ secrets.PRIVATE_REPO_WRITE_PACKAGES_PERMS }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       -
         name: Build and push
