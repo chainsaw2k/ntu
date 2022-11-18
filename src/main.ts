@@ -45,16 +45,16 @@ const main = async () => {
   }
 
   do {
-      const result = await runTest(TEST, {
-        protocol: getProtocol(urlParts),
-        target: urlParts,
-        query: env.QUERY,
-      });
-    
-      await reportTestResult(result, {
-        target: createUrl(urlParts),
-        slackWebhook: env.SLACK_WEBHOOK,
-      });
+    const result = await runTest(TEST, {
+      protocol: getProtocol(urlParts),
+      target: urlParts,
+      query: env.QUERY,
+    });
+  
+    await reportTestResult(result, {
+      target: createUrl(urlParts),
+      slackWebhook: env.SLACK_WEBHOOK,
+    });
   } while (1);
 };
 
