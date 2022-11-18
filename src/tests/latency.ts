@@ -27,7 +27,7 @@ async function* gen(args: RunTestArgs) {
         connection: connection?.connection,
       },
     });
-    // logSameLine(`Request: ${i + 1}/${MAX_REQUESTS}`);
+    // A logSameLine(`Request: ${i + 1}/${MAX_REQUESTS}`);
 
     yield execTime;
   }
@@ -36,7 +36,7 @@ async function* gen(args: RunTestArgs) {
     await connection.close();
   }
 
-  // console.log("\n");
+  // A console.log("\n");
 }
 
 export const latencyTest = async (args: RunTestArgs) => {
