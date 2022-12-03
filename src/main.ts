@@ -9,6 +9,8 @@ setUncaughtExceptionCaptureCallback((error) => {
   exit(1);
 });
 
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
 const getUrlParts = () => {
   const {
     URL,
@@ -57,6 +59,7 @@ const main = async () => {
       target: createUrl(urlParts),
       slackWebhook: env.SLACK_WEBHOOK,
     });
+    await sleep(60000);
     // eslint-disable-next-line no-constant-condition
   } while (1);
 };
