@@ -9,6 +9,7 @@ setUncaughtExceptionCaptureCallback((error) => {
   exit(1);
 });
 
+// eslint-disable-next-line promise-function-async
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 const getUrlParts = () => {
