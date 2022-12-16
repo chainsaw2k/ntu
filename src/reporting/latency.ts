@@ -6,6 +6,7 @@ export const reportLatencyTestResult = async (
   testTarget: string,
   reportTargets: { slack?: IncomingWebhook }
 ) => {
+  // Log the median so that I can generate metrics from the logs in Grafana Cloud
   console.log(result.median);
 
   await reportTargets.slack?.send({
