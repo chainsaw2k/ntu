@@ -13,6 +13,7 @@ export type LatencyTestResult = {
 
 const MAX_REQUESTS = 100;
 
+// test
 async function* gen(args: RunTestArgs) {
   const connection = args.query
     ? await createConnection(args.protocol, args)
