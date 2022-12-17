@@ -44,6 +44,7 @@ const main = async () => {
     throw new Error("Missing protocol.");
   }
 
+  // Infinite loop so that this runs better as a Section deployment
   do {
     // eslint-disable-next-line no-await-in-loop
     const result = await runTest(TEST, {
